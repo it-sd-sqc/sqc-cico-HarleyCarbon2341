@@ -8,6 +8,7 @@ import java.sql.*;
 import java.util.TimerTask;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.DocumentEvent;
 import javax.swing.text.*;
 
 // CiCo application's primary class ///////////////////////////////////////////
@@ -99,6 +100,12 @@ public class Main {
     }
   }
 
+  public static class CheckInOut implements ActionListener {
+    public void actionPerformed(ActionEvent event) {
+      Main.doneProcessing();
+    }
+  }
+
   // GUI variables ////////////////////////////////////////////////////////////
   static JPanel deck;
   static JTextField fieldNumber;
@@ -106,6 +113,8 @@ public class Main {
   static JLabel labelUser;
   static JLabel labelState;
   static JButton buttonAcknowledge;
+
+  static JButton checkInOut;
 
   // Timer variables //////////////////////////////////////////////////////////
   static java.util.Timer timer;
@@ -275,6 +284,11 @@ public class Main {
     panelStatus.setPreferredSize(new Dimension(640, 480));
     panelStatus.setMaximumSize(new Dimension(640, 480));
     panelStatus.setBackground(Color.blue);
+
+    checkInOut = new JButton("Next");
+    checkInOut.setAlignmentX(JComponent.CENTER_ALIGNMENT);
+    checkInOut.addActionListener(new CheckInOut()); //xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    panelStatus.add(checkInOut);
 
     panelStatus.add(Box.createVerticalGlue());
     labelUser = new JLabel("Registrant", JLabel.LEADING);
