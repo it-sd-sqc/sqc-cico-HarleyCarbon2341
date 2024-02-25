@@ -61,4 +61,14 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+# Module 5: Add button so next person can check in/out
+
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Click "Next" button
+
+## Expected results
+* Should override timeout and open sign in page.
+
+
 
