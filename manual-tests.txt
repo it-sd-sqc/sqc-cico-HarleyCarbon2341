@@ -61,4 +61,13 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 ## Expected results
 * Should display "Developer" for the user name.
 
+#Module 6 ticket 2: Better color set up.
 
+## Test steps
+1. Build and run CiCo.
+2. Enter 00000000 into the field and click Update.
+3. Enter "" into the field and click Update.
+## Expected results
+* Should build as black and white *
+* 0000000 Should give a green background and black text *
+* "" Should give a red background and black text*
